@@ -18,7 +18,7 @@ $(document).ready(function() {
 	});
 
 	var typed = new Typed(".typed", {
-		strings: ["Software Engineer.", "Web Developer.", "Student."],
+		strings: ["Web Developer.", "Webmaster."],
 		typeSpeed: 70,
 		loop: true,
 		startDelay: 1000,
@@ -49,7 +49,8 @@ $(document).ready(function() {
 
 
 	var skillsTopOffset = $(".skillsSection").offset().top;
-	var statsTopOffset = $(".statsSection").offset().top;
+	var statsTopOffset = $(".learningSection").offset().top;
+	var contactTopOffset = $(".learningSection").offset().top;
 	var countUpFinished = false;
 	$(window).scroll(function() {
 
@@ -66,8 +67,21 @@ $(document).ready(function() {
 		        	$(this.el).find('.percent').text(Math.round(percent));
 		        }
 		    });
+		}
 
+		if(window.pageYOffset > contactTopOffset - $(window).height() + 200) {
 
+			$('.chart').easyPieChart({
+		        easing: 'easeInOut',
+		        barColor: '#fff',
+		        trackColor: false,
+		        scaleColor: false,
+		        lineWidth: 4,
+		        size: 152,
+		        onStep: function(from, to, percent) {
+		        	$(this.el).find('.percent').text(Math.round(percent));
+		        }
+		    });
 		}
 
 
@@ -75,15 +89,12 @@ $(document).ready(function() {
 			$(".counter").each(function() {
 				var element = $(this);
 				var endVal = parseInt(element.text());
-
 				element.countup(endVal);
 			})
-
 			countUpFinished = true;
-
 		}
 
-
+		
 	});
 
 

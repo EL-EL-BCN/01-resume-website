@@ -323,19 +323,31 @@ body {
 	margin: 0;
 }
 
-#navigation {
+#navigation,
+.mylearning {
 	background-color: #e74c3c;
     padding: 20px 10px;
     z-index: 100;
     width: 100%;
 }
 
+.tab-content {
+	background-color: #e74c3c;
+}
+
 #navigation li {
 	padding: 0 10px;
 }
 
-#navigation li a {
+#navigation li a,
+.mylearning .nav-link {
 	color: #fff;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+	color: #fff;
+	background-color: inherit;
+    border: none;
 }
 
 .navbar-brand,
@@ -367,6 +379,37 @@ body {
 	width: 100%;
 	height: 100%;
 	background: url(../img/loader.gif) center center no-repeat;
+}
+
+.tab-content {
+	padding: 20px 0;
+}
+
+.learningContainer {
+	border: 2px solid #fff;
+	border-radius: 5px;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+.learningContainer h4,
+.learningContainer h5,
+.learningContainer p {
+	color: #fff;
+	text-decoration: none;
+}
+
+.learningContainer a {
+	color: #111;
+	text-decoration: none;
+}
+
+.buttonContainer button {
+	margin: 10px 5px;
+}
+
+.col-md-12 h4 {
+	padding: 10px 0;
 }
 
 
